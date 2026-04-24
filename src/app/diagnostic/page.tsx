@@ -188,13 +188,11 @@ export default function RaioX() {
           {session && diagnosticStatus && (
             <div className="hidden md:flex items-center gap-1.5 text-xs text-slate-500">
               <span className={`w-1.5 h-1.5 rounded-full ${
-                diagnosticStatus === 'completed' ? 'bg-green-500' : 
                 diagnosticStatus === 'processing' ? 'bg-amber-500 animate-pulse' : 
                 'bg-blue-500'
               }`} />
               {diagnosticStatus === 'draft' && 'In progress · autosaved'}
               {diagnosticStatus === 'processing' && 'Processing...'}
-              {diagnosticStatus === 'completed' && 'Diagnostic completed'}
               {diagnosticStatus === 'error' && 'Processing error'}
             </div>
           )}
