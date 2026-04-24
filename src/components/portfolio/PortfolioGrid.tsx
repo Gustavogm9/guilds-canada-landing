@@ -365,10 +365,6 @@ export function PortfolioGrid() {
                       <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider mb-1">Tech Stack</div>
                       <div className="text-sm font-medium text-zinc-300">{item.tech}</div>
                     </div>
-                    <div className="text-left sm:text-right">
-                      <div className="text-[11px] font-bold text-primary uppercase tracking-wider mb-1">Build something like this</div>
-                      <div className="text-lg font-serif font-bold text-white">{item.anchorPrice}</div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -380,7 +376,7 @@ export function PortfolioGrid() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-primary/10 to-transparent opacity-50 pointer-events-none" />
           <h3 className="text-3xl font-serif font-bold text-white mb-4 relative z-10">Need a system tailored to your operation?</h3>
           <p className="text-zinc-400 mb-8 relative z-10 text-lg">
-            All prices listed above are indicative. The confirmed price comes after a scoping session. Book a discovery call to map out what makes sense for your business.
+            Every system is custom scoped. Book a discovery call to map out what makes sense for your business and receive a precise technical proposal.
           </p>
           <Link 
             href="/#contact"

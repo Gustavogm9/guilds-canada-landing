@@ -10,7 +10,6 @@ import { MOCK_DASHBOARD_DATA } from '@/components/raiox/dashboard/mockData';
 export default function RaioXShared() {
   const params = useParams();
   const token = params.token as string;
-  const { token } = useParams<{ token: string }>();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [diagnosticId, setDiagnosticId] = useState<string | null>(null);
@@ -65,7 +64,7 @@ export default function RaioXShared() {
         <h2 className="text-2xl font-bold text-white mb-3">Acesso Indisponível</h2>
         <p className="text-slate-400 text-center max-w-md mb-8">{error || 'Relatório não encontrado.'}</p>
         <Link 
-          to="/"
+          href="/"
           className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
         >
           Conheça o Raio-X G-FORGE

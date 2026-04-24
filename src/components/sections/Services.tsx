@@ -112,7 +112,7 @@ export function Services() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-zinc-400"
           >
-            Fixed-scope services. Guaranteed delivery. Canadian entity. Each product is designed to deliver a measurable outcome in a defined timeframe.
+            Fixed-scope services. Guaranteed delivery. Each product is designed to deliver a measurable outcome in a defined timeframe.
           </motion.p>
         </div>
 
@@ -166,11 +166,8 @@ export function Services() {
                 <div className="md:w-2/3 flex flex-col sm:flex-row gap-8">
                   <div className="sm:w-1/2 flex flex-col justify-between">
                     <div>
-                      <div className="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Investment</div>
-                      <div className="text-2xl font-serif font-bold text-white mb-6">{product.investment}</div>
-                      
                       <div className="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Timeline</div>
-                      <div className="text-lg font-bold text-zinc-300">{product.timeline}</div>
+                      <div className="text-lg font-bold text-zinc-300 mb-6">{product.timeline}</div>
                     </div>
                   </div>
 

@@ -6,8 +6,8 @@ import { CheckCircle2 } from "lucide-react";
 export function WhyUs() {
   const points = [
     {
-      title: "Canada-Led Delivery",
-      description: "Direct communication, cultural alignment, and strict adherence to North American quality standards."
+      title: "Engineering-Led Delivery",
+      description: "Direct communication, cultural alignment, and strict adherence to enterprise quality standards."
     },
     {
       title: "Global Engineering Talent",
@@ -58,7 +58,7 @@ export function WhyUs() {
             className="bg-zinc-900/50 rounded-2xl p-8 md:p-10 border border-zinc-800"
           >
             <h3 className="font-serif text-2xl font-bold text-white mb-8 pb-4 border-b border-zinc-800">
-              The Reality for Canadian Businesses
+              The Reality for Modern Businesses
             </h3>
             <ul className="space-y-6">
               {[
@@ -91,9 +91,9 @@ export function WhyUs() {
             </h3>
             <ul className="space-y-6 relative z-10">
               {[
-                "Canadian-led architecture, management, and delivery",
+                "Expert-led architecture, management, and delivery",
                 "Access to elite global engineering at a sensible cost",
-                "Built-in Canadian compliance & rigorous data governance",
+                "Built-in compliance & rigorous data governance",
                 "Predictable, fixed-scope engagements with clear milestones"
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-4 text-zinc-300">

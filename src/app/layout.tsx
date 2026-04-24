@@ -14,7 +14,7 @@ const fontSerif = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Guilds | Custom Software, Automation & AI Systems",
-  description: "Canada-led delivery of high-end software, intelligent automation, and tech strategy.",
+  description: "Expert-led delivery of high-end software, intelligent automation, and tech strategy.",
 };
 
 export default function RootLayout({

@@ -27,7 +27,7 @@ export function Hero() {
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <span className="inline-block py-1 px-3 rounded-full bg-zinc-100 border border-zinc-200 text-zinc-600 text-sm font-medium mb-6">
-              Canada-led Delivery • Global Engineering
+              Premium Delivery • Global Engineering
             </span>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.1]">
               Custom Software, Automation & <span className="text-primary italic pr-2">AI Systems</span>
@@ -50,8 +50,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
             className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-2 text-sm text-foreground font-medium"
           >
-            <div className="flex items-center gap-2"><Check className="w-5 h-5 text-primary" /> Canadian contracts</div>
-            <div className="flex items-center gap-2"><Check className="w-5 h-5 text-primary" /> PIPEDA-aligned data practices</div>
+            <div className="flex items-center gap-2"><Check className="w-5 h-5 text-primary" /> Enterprise-grade contracts</div>
+            <div className="flex items-center gap-2"><Check className="w-5 h-5 text-primary" /> Strict data governance & compliance</div>
             <div className="flex items-center gap-2"><Check className="w-5 h-5 text-primary" /> Full IP ownership</div>
             <div className="flex items-center gap-2"><Check className="w-5 h-5 text-primary" /> Fixed-scope milestone delivery</div>
           </motion.div>
