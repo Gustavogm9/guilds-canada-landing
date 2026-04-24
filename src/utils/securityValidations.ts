@@ -13,7 +13,7 @@ export const contractDataSchema = z.object({
   template_id: z.string()
     .uuid('ID do template inválido'),
   
-  variables_data: z.record(z.any())
+  variables_data: z.record(z.string(), z.any())
     .refine(val => {
       const str = JSON.stringify(val);
       return str.length < 10000; // Limit JSON size
@@ -80,7 +80,7 @@ export const templateDataSchema = z.object({
   default_clauses: z.array(z.string().uuid())
     .max(30, 'Máximo de 30 cláusulas padrão por template'),
   
-  variables_mapping: z.record(z.any())
+  variables_mapping: z.record(z.string(), z.any())
     .refine(val => {
       const str = JSON.stringify(val);
       return str.length < 5000; // Limit JSON size
@@ -132,10 +132,10 @@ export class RateLimiter {
 // Content sanitization
 export const sanitizeContent = (input: string): string => {
   return input
-    .replace(/<script[^>]*>.*?<\/script>/gis, '')
-    .replace(/<iframe[^>]*>.*?<\/iframe>/gis, '')
-    .replace(/<object[^>]*>.*?<\/object>/gis, '')
-    .replace(/<embed[^>]*>/gis, '')
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<iframe[^>]*>[\s\S]*?<\/iframe>/gi, '')
+    .replace(/<object[^>]*>[\s\S]*?<\/object>/gi, '')
+    .replace(/<embed[^>]*>/gi, '')
     .replace(/javascript:/gi, '')
     .replace(/on\w+\s*=/gi, '')
     .trim();

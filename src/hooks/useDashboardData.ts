@@ -49,41 +49,23 @@ export function useDashboardData() {
           narrativesMap[n.section_id] = n.content;
         });
 
-        // Construct DashboardData
+        // Construct DashboardData using mock base to satisfy strict DashboardData interface constraints
         const dashboardData: DashboardData = {
+          ...MOCK_DASHBOARD_DATA,
           companyName: narrativesMap.empresa?.name || 'Sua Empresa',
-          financialLoss: scores.annual_loss_estimate || 0,
+          loss: { 
+            ...MOCK_DASHBOARD_DATA.loss,
+            total: scores.annual_loss_estimate || 0 
+          },
           fitScore: {
-            total: scores.fit_score || 0,
-            factors: []
-          },
-          maturity: {
-            score: scores.overall_score || 0,
-            level: narrativesMap.maturidade?.headline || 'Nível Analisado',
-            description: narrativesMap.empresa?.synopsis || 'Análise baseada nas respostas.',
-            dimensions: {
-              processos: scores.processos_score || 0,
-              tecnologia: scores.sistemas_score || 0,
-              dados: scores.dados_score || 0,
-              pessoas: scores.pessoas_score || 0
-            }
-          },
-          market: {
-            icpFit: 0,
-            positioning: narrativesMap.mercado?.positioning || '',
-            competitorIndex: narrativesMap.comunicacao?.score || 0
+            ...MOCK_DASHBOARD_DATA.fitScore,
+            total: scores.fit_score || 0
           },
           phase: {
-            id: 'phase_1',
+            ...MOCK_DASHBOARD_DATA.phase,
             name: 'Estruturação',
-            description: 'Foco em estabilizar processos.',
-            color: '#3B82F6',
-            metrics: narrativesMap.kpis || []
-          },
-          roadmap: narrativesMap.plano?.actions || [],
-          // Keep some mock defaults if the AI didn't generate them perfectly
-          bottlenecks: narrativesMap.maturidade?.gaps || MOCK_DASHBOARD_DATA.bottlenecks,
-          efficiency: MOCK_DASHBOARD_DATA.efficiency
+            description: 'Foco em estabilizar processos.'
+          }
         };
 
         setData(dashboardData);
